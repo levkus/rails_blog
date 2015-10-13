@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <div class="post_header">
+    <h1>Блог</h1>
+    <%= link_to 'Новый пост', new_article_path, :class => "article_button" %>
+  </div>
+  <% @articles.each do |article| %>
+    <div class="entry">
+      <div class="entry_header">
+        <h2><%= link_to article.title, article_path(article) %></h2>
+        <%= link_to '<i title="Удалить" class="fa fa-trash"></i>'.html_safe, article_path(article), method: :delete, data: {confirm: 'Точно удалить?'}, :class => "utility_link" %>
+        <%= link_to '<i title="Редактировать" class="fa fa-pencil"></i>'.html_safe, edit_article_path(article), :class => "utility_link" %>
+      </div>
+      <p><%= article.text %></p>
+    </div>
+  <% end %>
+</div>

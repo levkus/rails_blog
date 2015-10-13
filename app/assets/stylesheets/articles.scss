@@ -1,0 +1,103 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.wrapper {
+  .post_header:after {
+  content: '';
+  display: table;
+  clear: both;
+  }
+  
+  h1 {
+    float: left;
+    margin-top: 0;
+  }
+  
+  .article_button {
+    display: block;
+    background: #43A047;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    text-decoration: none;
+    float: right;
+    
+    &:hover {
+      background: #66BB6A;
+    }
+  }
+}
+
+
+
+
+.entry {
+  background: #303F9F;
+  color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  
+  .entry_header {
+    
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+    
+    .utility_link {
+      margin-left: 1rem;
+      float: right;
+      display: block;
+    }
+  
+    h2, h3 {
+      margin: 0;
+      float: left;
+      
+      a {
+        text-decoration: none;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  h3 {
+    margin: 0;
+  }
+  
+  input[type="text"], textarea {
+    background: #283593;
+    border: none;
+    width: 100%;
+    padding: 1rem;
+    color: #fff;
+    box-sizing: border-box;
+    margin: 1rem 0;
+  }
+  
+  input[type="text"] {
+    font-size: 1.5rem;
+  }
+  
+  textarea {
+    height: 300px;
+    font-size: 1.3rem;
+    resize: none;
+  }
+  
+  input[type="submit"], .button {
+    background: #43A047;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    
+    &:hover {
+      background: #66BB6A;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <div class="post_header">
+    <h1>Великая мудрость кроется ниже:</h1>
+    <%= link_to 'Список постов', articles_path, :class => "article_button" %>
+  </div>
+  <div class="entry">
+    <div class="entry_header">
+      <h2><%= @article.title %></h2>
+      <%= link_to '<i title="Удалить" class="fa fa-trash"></i>'.html_safe, article_path(@article), method: :delete, data: {confirm: 'Точно удалить?'}, :class => "utility_link" %>
+      <%= link_to '<i title="Редактировать" class="fa fa-pencil"></i>'.html_safe, edit_article_path(@article), :class => "utility_link" %>
+    </div>
+    <p><%= @article.text %></p>
+  </div>
+  <div class="post_header">
+    <h1>Комментировать</h1>
+  </div>
+  <%= render 'comments/form' %>
+  <div class="post_header">
+    <h1>Комментарии</h1>
+  </div>
+  <%= render @article.comments %>
+</div>

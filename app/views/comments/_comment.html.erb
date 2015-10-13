@@ -1,0 +1,7 @@
+<div class="entry comment">
+  <div class="entry_header">
+    <h3><%= comment.commenter %></h2>
+    <%= link_to '<i title="Удалить" class="fa fa-trash"></i>'.html_safe, [comment.article, comment], method: :delete, data: {confirm: 'Точно удалить?'}, :class => "utility_link" %>
+  </div>
+  <p><%= comment.body %></p>
+</div>

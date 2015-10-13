@@ -1,0 +1,11 @@
+<div class="entry comment">
+  <%= form_for([@article, @article.comments.build]) do |f| %>
+    <h3><%= f.label :commenter, 'Автор' %></h3>
+    <%= f.text_field :commenter %>
+
+    <h3><%= f.label :body, 'Текст' %></h3>
+    <%= f.text_area :body %>
+
+    <%= f.submit 'Отправить' %>
+  <% end %>
+</div>
